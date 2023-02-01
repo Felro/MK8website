@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MK8: Ranker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="javascript" href="script.js">
+    <link rel="json" href="package.json">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
+</head>
+<div class="overflow">
+
+    <body>
+        <!--Navigation-->
+        <div class="navIcon center">
+            <div class="navIcondash"></div>
+            <div class="navIcondash"></div>
+        </div>
+
+        <nav class="navBar">
+            <a href="#" class="navLink">Front Page</a>
+            <a href="#" class="navLink">Mario Kart</a>
+            <a href="#" class="navLink">Table and List</a>
+            <a href="#" class="navLink">Graphs and Rankings</a>
+            <a href="#" class="navLink">Leave a Review</a>
+        </nav>
+
+
+
+        <!-- Front Page -->
+        <div class="container">
+            <H1></H1>
+            <!-- Background Image -->
+            <div class="backgroundPage"></div>
+            <!--First Part-->
+            <section class="section-1 center">
+                <!--Placement for 3D Logo-->
+                <div class="logo">Wayne Novich</div>
+                <!--Animated Tires-->
+                <div class="tires">
+                    <div class="tire tire-1"></div>
+                    <div class="tire tire-2"></div>
+                    <div class="tire tire-3"></div>
+                    <div class="tire tire-4"></div>
+                </div>
+                <div class="center-tire center">
+                    <img src="photos/MK8logo.png" />
+                </div>
+                <!--text, on the left and right side-->
+                <h4 class="FPtext FPtext1">Mario Kart 8:Deluxe</h4>
+                <h4 class="FPtext FPtext2">Time Ranker</h4>
+
+                <!--The Proceed Button-->
+                <a href="#" class="centralButton">
+                    <div class="CBcontent center">
+                        <div class="CBlines"></div>
+                        <div class="CBlines"></div>
+                        <div class="CBlines"></div>
+                        <span>To Ranker</span>
+                    </div>
+                </a>
+            </section>
+
+            <!-- About Mario Kart -->
+            <section class="section-2">
+                <h1 class="SC2H1">About Mario Kart</h1>
+                <p class="aboutMKTX"></p>
+
+                <a href="#" class="centralButton">
+                    <div class="CBcontent center">
+                        <div class="CBlines"></div>
+                        <div class="CBlines"></div>
+                        <div class="CBlines"></div>
+                        <span>Onwards</span>
+                    </div>
+                </a>
+            </section>
+
+
+            <!--Section Three, The Table-->
+            <section class="Section-3">
+                <!--Table does not seem to work.-->
+                <table>
+                    <tr>
+                      <th>Person 1</th>
+                      <th>Person 2</th>
+                      <th>Person 3</th>
+                    </tr>
+                    <tr>
+                      <td>Emil</td>
+                      <td>Tobias</td>
+                      <td>Linus</td>
+                    </tr>
+                    <tr>
+                      <td>16</td>
+                      <td>14</td>
+                      <td>10</td>
+                    </tr>
+                  </table>
+                <!--A Custom Loading Screen I did not fully implement but wanted to show it off-->
+                <div class="race-car-tire">
+                    <div class="tire-rim"></div>
+                    <div class="tire-thread"></div>
+                    <div class="dot-1"></div>
+                    <div class="dot-2"></div>
+                </div>
+            </section>
+
+
+            <!--Section Four, Charts-->
+            <section class="section-4">
+                <h3 class="S4text S4text1">The Graphs</h3>
+                <h3 class="S4text S4text2"> & Time Ranker</h3>
+                <div class="graph-container">
+                    <canvas id="scatterChart"></canvas>
+                    <canvas id="polarAreaChart"></canvas>
+                    <canvas id="lineChart"></canvas>
+                    <script src="script.js"></script>
+                </div>
+
+            </section>
+        </div>
+
+
+
+        <!-- Centered Focus -->
+        <div class="focusPoint"></div>
+        <div class="focusDot"></div>
+
+
+
+
+
+
+
+
+
+    </body>
+</div>
+
+
+<!--src="script.js"-->
+<script src="script.js"></script>
+
+
+</html>

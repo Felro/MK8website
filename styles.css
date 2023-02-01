@@ -1,0 +1,625 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Press+Start+2P&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Tenor+Sans&display=swap');
+
+/* Standard Site Styles */
+.overflow
+{
+  overflow: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+  font-family: 'Press Start 2P', cursive;
+  /*font-family: 'Arvo', serif;
+  
+  font-family: 'Quantico', sans-serif;
+  font-family: 'Tenor Sans', sans-serif;*/
+}
+/*common style for most images and icons*/
+.center
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modify Standard Font Size */
+html
+{
+  font-size: 62.5%;
+  
+}
+
+/*NAV*/
+.navBar
+{
+  position: fixed;
+  top: 2.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 3rem;
+  transition: opacity .5s, visibility .5s;
+}
+
+.navIcon
+{
+  position: fixed;
+  width: 12rem;
+  height: 7rem;
+  right: 6rem;
+  /*background-color: steelblue;*/
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .2s, transform .5s;
+}
+
+.iconVis
+{
+  opacity: 1;
+  visibility: visible;
+}
+
+.iconGone
+{
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(10rem);
+}
+
+.navIcondash
+{
+  width: 4rem;
+  height: 0.1rem;
+  background-color: steelblue;
+  margin: 0.5rem 0;
+  box-shadow: 0 0.3rem 0.5rem black;
+}
+
+.navLink
+{
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: white;
+  margin: 0 2.5rem;
+  z-index: 100;
+  text-shadow: 0 0.3rem 0.5rem black;
+}
+
+/* Focus */
+.focusPoint,.focusDot
+{
+  border-radius: 50%;
+  position: fixed;
+  z-index: 300;
+  transform: translate(-50%,-50%);
+  opacity: 0;/*this tells the mouse to be hidden till called*/
+  pointer-events: none;
+}
+
+.focusPoint
+{
+  width: 6rem;
+  height: 6rem;
+  border: 0.1rem solid #c7a622;
+  animation: focusPointamim 10s infinite linear;
+}
+
+.focusDot
+{
+  width: .5rem;
+  height: .5rem;
+  background-color: #9b0e0e;
+  animation: focusDotanim 10s infinite linear;
+}
+/*Animation Key Frames for the Mouse*/
+@keyframes focusPointamim
+{
+  0%{width:6rem; height: 6rem;}
+  25%{width:8rem; height: 8rem;}
+  35%{width:4rem; height: 4rem;}
+  70%{width:8rem; height: 8rem;}
+  100%{width:6rem; height: 6rem;}
+}
+
+@keyframes focusDotanim
+{
+  0%{width: 0.5em; height: 0.5rem;}
+  55%{width:1.5rem; height: 1.5rem;}
+  100%{width:0.5rem; height: 0.5rem;}
+}
+
+/* Background of Page */
+.backgroundPage
+{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    rgba(65, 62, 62, 0.7),
+    rgba(0,0,0,7)),
+    url(Photos/mainBK.webp) center no-repeat;
+    background-size: cover;
+  
+}
+
+h1{
+  font-family: 'Press Start 2P';
+}
+
+title
+{
+  font-family: 'Press Start 2P';
+}
+
+/*First Section Styles*/
+.section-1
+{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /*Making sure the Images don't engulf the screen*/
+  
+}
+
+/*Animate for the Tires*/
+.center-tire
+{
+  width: 55rem;
+  height: 55rem;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 50%;
+  transition: width .5s, height .5s;
+}
+
+.center-tire:hover
+{
+  width: 60rem;
+  height: 60rem;
+}
+
+.tires
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.tire
+{
+  width:22rem;
+  height:22rem;
+  border-radius: 50%;
+  background-color: #9b0e0e;
+  /*centers the Tires to the center of their respective grids*/
+  align-self: center;
+  justify-self: center;
+  position: relative;
+  transition: left 2s, top 2s;
+  top: 0;
+  left: 0;
+}
+
+.tire-1
+{
+  background: url(Photos/crownCup.png) center no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+  /*For you Jack*/
+  border: 0.5rem double steelblue;
+  margin-left: -10rem;
+}
+.tire-2
+{
+  background: url(Photos/MK8_FlowerCuptv.svg) center no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+  /*For you Jack*/
+  border: 0.5rem double steelblue;
+  margin-right: -10rem;
+}
+.tire-3
+{
+  background: url(Photos/MK8_MushroomCuptv.svg) center no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+  /*For you Jack*/
+  border: 0.5rem double steelblue;
+  margin-left: -10rem;
+}
+.tire-4
+{
+  background: url(Photos/MK8_ShellCuptv.svg) center no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+  /*For you Jack*/
+  border: 0.5rem double steelblue;
+  margin-right: -10rem;
+}
+
+.center-tire img
+{
+  mix-blend-mode: color-dodge;
+  position: relative;
+  transition: left 2s, top 2s;
+  top: 0;
+  left: 0;
+}
+
+.logo
+{
+  position: absolute;
+  top: 2rem;
+  left: 5rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: white;
+}
+
+/*Text Styles for the Text Part*/
+.FPtext
+{
+  color: white;
+  text-transform: uppercase;
+  width: 0;
+  word-wrap: break-word;
+  line-height: 2;
+  position: sticky;
+  bottom: 10rem;
+}
+
+.FPtext1
+{
+  font-size: 2rem;
+  margin: 0 auto 0 10rem;
+}
+
+.FPtext2
+{
+  font-size: 3rem;
+  margin: 0 10rem 0 auto;
+}
+
+/*Central Button Styles*/
+.centralButton
+{
+  position: absolute;
+  width: 15rem;
+  height: 15rem;
+  background-color: #9b0e0e;
+  border-radius: 50%;
+  bottom: 5rem;
+  border: .4rem dashed white;
+  padding: 0.1rem;
+  overflow: hidden; /*keeps the secondary Hover color within the button*/
+}
+
+.CBcontent
+{
+  width: 100%;
+  height: 100%;
+  border: .4rem dashed steelblue;
+  border-radius: 50%;
+  transition: transform .2s, border .2s;
+  transform: rotate(40deg);
+}
+
+.centralButton:hover .CBcontent
+{
+  transform: rotate(180deg);
+  border: 0.3rem double #9b0e0e;
+  transition: transform .2s .5s, border .2s;
+}
+
+.CBlines
+{
+  position: absolute;
+  top: 5rem;
+  width: 4rem;
+  height: 1rem;
+  border: 0.1rem solid white;
+
+}
+
+.CBlines:nth-child(1)
+{
+  transform: rotateZ(-45deg)translateX(-0.65rem);
+  transform-origin: left center;
+  border-right: none;
+
+}
+.CBlines:nth-child(2)
+{
+  transform: rotateZ(45deg)translateX(0.65rem);
+  transform-origin: right center;
+  border-left: none;
+}
+
+.CBlines:nth-child(3)
+{
+  transform: rotateZ(90deg)translateX(0.5rem);
+  border-left: none;
+}
+
+.centralButton span
+{
+  position: absolute;
+  bottom: 4rem;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.fader
+{
+  position: absolute;
+  width: 0;
+  height: 0;
+  background-color: aqua;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: faderHover 2s forwards;
+}
+
+/*Fader KeyFrames for Hover*/
+@keyframes faderHover
+{
+  0%{width: 0;height: 0;}
+  100%{width: 500%;height: 500%;}
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*SECTION TWO*/
+.section-2
+{
+  position: relative;
+  padding: 10rem 10rem 15rem 10rem;
+}
+
+.SC2H1
+{
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: 'Quantico', sans-serif;
+  text-transform: uppercase;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 10rem;
+  transform: translateY(-50%);
+  width: 0;
+  word-break: break-all;
+  font-style: italic;
+  line-height: 5rem;
+}
+
+/*Mario Web Description*/
+.aboutMKTX
+{
+  width: 80%;
+  margin:auto
+}
+
+.aboutMKTX span
+{
+  font-family: 'Press Start 2P';
+  font-size: 5rem;
+  font-weight:bolder;
+  color: #aaa;
+  letter-spacing: 1rem;
+  line-height: 5rem;
+  text-shadow: 0 0 steelblue;
+  position: relative;
+  mix-blend-mode:difference;
+}
+
+@keyframes MKTXanim
+{
+  0%{color: wheat;top:0;}
+  10%,90%{color:steelblue;top: 2rem;}
+  100%{color:wheat;top: 0;}
+}
+
+
+/*Section 2 Button*/
+.section-2 .centralButton
+{
+  left:5%;
+  top:80%;
+  bottom:-5rem;
+  transform: translateX(-50%);
+  
+}
+
+
+
+
+
+
+
+
+.race-car-tire {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: 50px auto;
+}
+
+.tire-rim {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px 50px 0 50px;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.tire-thread {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px 40px 40px 40px;
+  background-color: steelblue;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.dot-1,
+.dot-2 {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: black;
+  position: absolute;
+  top: 45px;
+  left: 45px;
+}
+
+.dot-1 {
+  transform: rotate(45deg);
+}
+
+.dot-2 {
+  transform: rotate(-45deg);
+}
+
+
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*---------------------------------------------------------------------------------*/
+/*Section 3*/
+.Section-3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.h3
+{
+  font-family: 'Tenor Sans', sans-serif;
+  font-weight: 200;
+  font-style: bold;
+}
+
+/*H3 Text Styles*/
+/*Text Styles for the Text Part*/
+.S4text
+{
+  color: white;
+  text-transform: uppercase;
+  width: 0;
+  
+  line-height: 2;
+  
+  bottom: 5rem;
+}
+
+.S4text1
+{
+  font-size: 2rem;
+  
+}
+
+.S4text2
+{
+  font-size: 2rem;
+  align-items: right;
+}
+
+
+
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 20px;
+  
+}
+
+.table {
+  border-collapse: collapse;
+  border: 1px solid rgb(255, 255, 255);
+  
+}
+
+.td {
+  border: 1px solid black;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+/*Table on Section3*/
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+
+
+/*---------------------------------------------------------------------------------------*/
+/*Section 4*/
+.section-4
+{
+  position: relative;
+  padding: 10rem 10rem 15rem 10rem;
+}
+
+/*Plotted Chart Style*/
+canvas {
+  width: 40%;
+  height: auto;
+  float: left;
+  background-color: white;
+}
+
+#scatterChart, #polarAreaChart {
+  float: left;
+  width: 49%;
+  height: 5in;
+}
+
+#lineChart {
+  clear: both;
+  width: 100%;
+  height: 5in;
+}
+
+
+

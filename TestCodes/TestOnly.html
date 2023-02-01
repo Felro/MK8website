@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+  <style>
+    canvas {
+      width: 33%;
+      height: auto;
+      float: left;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="scatterChart"></canvas>
+  <canvas id="polarAreaChart"></canvas>
+  <canvas id="lineChart"></canvas>
+  <script>
+    var scatterCtx = document.getElementById("scatterChart").getContext("2d");
+    var scatterChart = new Chart(scatterCtx, {
+      type: 'scatter',
+      data: {
+        datasets: [{
+          label: 'Scatter Dataset 1',
+          data: [{
+            x: -10,
+            y: 0
+          }, {
+            x: 0,
+            y: 10
+          }, {
+            x: 10,
+            y: 5
+          }]
+        }, {
+          label: 'Scatter Dataset 2',
+          data: [{
+            x: -5,
+            y: 5
+          }, {
+            x: 5,
+            y: -5
+          }, {
+            x: 15,
+            y: -10
+          }]
+        }]
+      },
+      options: {
+        scales: {
+          xAxes: [{
+            type: 'linear',
+            position: 'bottom'
+          }]
+        }
+      }
+    });
+
+    var polarAreaCtx = document.getElementById("polarAreaChart").getContext("2d");
+    var polarAreaChart = new Chart(polarAreaCtx, {
+      type: 'polarArea',
+      data: {
+        labels: ['Variable 1', 'Variable 2', 'Variable 3', 'Variable 4', 'Variable 5'],
+        datasets: [{
+          data: [10, 20, 30, 40, 50],
+          backgroundColor: ['red', 'blue', 'green', 'yellow', 'purple']
+        }]
+      }
+    });
+
+    var lineCtx = document.getElementById("lineChart").getContext("2d");
+    var lineChart = new Chart(lineCtx, {
+      type: 'line',
+      data: {
+        labels: [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300],
+        datasets: [{
+          label: 'Average Mushroom Use',
+          data: [10, 20, 15, 25, 30, 25, 20, 15, 10, 5, 0],
+          borderColor: 'red',
+          fill: false
+        }]
+      },
+      options: {
+        scales: {
+          xAxes: [{
+            type: 'linear',
+            position: 'bottom',
+            scaleLabel: {
+              display: true,
+              labelString: 'Time (seconds)'
+            }
+          }],
+          yAxes: [{
+            scaleLabel: {
+              display: true,
+              labelString: 'Average Mushroom Use'
+            }
+          }]
+        }
+      }
+    });
+  </script>
+</body>
+</html>
